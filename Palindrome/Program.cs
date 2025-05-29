@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Palindrome
@@ -10,16 +11,30 @@ namespace Palindrome
 
         }
         private bool IsPalindrome(string s)
+            { 
+                bool Palindrome(string sp)
             {
-                if (s == null)
-                {
-                    throw new ArgumentNullException(nameof(s));
-                }
+                char[] array = sp.ToCharArray();
+                Array.Reverse(array);
+                string reversed = new string(array);
 
-                if (s.Length < 2)
+                if (sp == reversed)
                 {
                     return true;
                 }
+            }
+
+                if (s == null)
+            {
+                throw new ArgumentNullException(nameof(s));
+            }
+
+
+                if (s.Length < 2)
+            {
+                return true;
+            }
+                
             
             }
     }
