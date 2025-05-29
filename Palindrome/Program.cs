@@ -8,9 +8,12 @@ namespace Palindrome
     {
         private static void Main(string[] args)
         {
-
+             foreach (string word in args)
+            {
+                Console.WriteLine($"{word} -> {IsPalindrome(word)}");
+            }
         }
-        private bool IsPalindrome(string s)
+        private static bool IsPalindrome(string s)
         {
             bool Palindrome(string sp)
             {
