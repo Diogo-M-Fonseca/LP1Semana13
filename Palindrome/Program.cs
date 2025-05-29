@@ -11,8 +11,8 @@ namespace Palindrome
 
         }
         private bool IsPalindrome(string s)
-            { 
-                bool Palindrome(string sp)
+        {
+            bool Palindrome(string sp)
             {
                 char[] array = sp.ToCharArray();
                 Array.Reverse(array);
@@ -22,17 +22,25 @@ namespace Palindrome
                 {
                     return true;
                 }
+                else
+                {
+                    return false;
+                }
             }
 
-                if (s == null)
+            if (s == null)
             {
                 throw new ArgumentNullException(nameof(s));
             }
 
 
-                if (s.Length < 2)
+            if (s.Length < 2)
             {
                 return true;
+            }
+            else
+            {
+                return Palindrome(s);
             }
                 
             
