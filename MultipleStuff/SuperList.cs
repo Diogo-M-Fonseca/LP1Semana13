@@ -28,14 +28,19 @@ namespace MultipleStuff
             max = this.Max();
         }
 
-        public void GetMinMax2()
+        public MinMaxStruct GetMinMax2()
         {
-            new MinMaxStruct(this.Min(), this.Max());
+            return new MinMaxStruct(this.Min(), this.Max());
         }
 
-        public void GetMinMax3()
+        public Tuple<double, double> GetMinMax3()
         {
-            Tuple.Create(this.Min(), this.Max());
+            return Tuple.Create(this.Min(), this.Max());
+        }
+
+        public (double Min, double Max) GetMinMax4()
+        {
+            return (this.Min(), this.Max());
         }
     }
 }
